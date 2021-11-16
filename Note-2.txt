@@ -1,0 +1,33 @@
+Creating First Program in Java
+
+- Every java program start with class
+- Class name should start with capital letter
+- Class name should be same as file name
+- Class name starts with either alphabet or special letter(_, $)
+
+class Example {
+
+data member/class variables
+method/function
+
+}
+
+- Compile: javac filename.java
+- Run	: java classname
+
+- java comes from JRE, Now JRE starts searching for main
+
+Main Method:
+
+- main is a entry point of every java program
+- Without main java will comoile the code and convert it into byte code, but it can't execute the code or interpret the code
+
+4 types scopes in java
+
+- public: global, which is accessible for all, from anywhere
+- private: accessible within the class 
+- protected: can be accessed inside the package/folder, can also be accessed outside the package by using inheritance
+- default: The scope can be accessed by any class but within same package
+
+
+
