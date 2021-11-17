@@ -29,5 +29,103 @@ Main Method:
 - protected: can be accessed inside the package/folder, can also be accessed outside the package by using inheritance
 - default: The scope can be accessed by any class but within same package
 
+why main is public?
+
+- JRE uses main: java bytecode/classname
+- java command trigger the JRE
+- JRE load your class in the memory
+- JRE is looking for main
+- JRE is outside from your directory/folder/package
+- And outside the package things can access
+
+why main is Static?
+
+- Static things are loaded into memory when class is loaded.
+
+why main is void?
+
+- main is void in nature
+- main is entry point so there is no need to return anything
+
+Main Arguments - String[] args
+
+- main has command line arguments
+- We can pass any number of arguments, that's why it is array
+- All argumnets are pass to main in form of String
+
+What is String?
+
+- String is a collection of chars
+- String is internally is a char[]
+- String is a predefined class in java as it is in Capital Letter
+
+What is System.out.println()?
+
+- println(): print in new line, println comes fron out object
+- out: out is a predefined object, which belongs to PrintStream class
+- System is a predefined class used for input, output, and error
+e.g: System.in, System.out and System.err
+
+println vs print
+
+- println: print in new line
+- print: here cursor remains at the end of the line
+
+
+Can we overload main()?
+
+- yes, we can overload the main
+- when we execute the class, JVM(Java Virtual Machine) starts execution with public static void 
+main(String[] args)
+
+JDK --> JRE
+
+JRE ---> JVM 
+
+JVM ---> Library files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
