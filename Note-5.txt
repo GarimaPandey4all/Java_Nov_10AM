@@ -1,0 +1,38 @@
+Data Types:
+
+8 bits = 1 byte
+
+It is used to store integral only.
+byte - 1 byte
+short - 2 bytes
+int - 4 bytes
+long - 8 bytes
+
+Decimal Values
+float - 4 bytes
+double - 8 bytes
+
+char - 2 bytes
+
+- Because java works on unicode (universal code)
+
+String - size depending upon OS
+- String is internally a char[]
+
+boolean - size depending upon OS
+boolean - 1 byte / 2 byte / 4 byte
+
+value data types: those data types are in lower case
+reference data types: those data types are in capital letter, like String
+
+Enter the age of student
+
+byte = 1 byte = 8 bits
+
+1 bit : - +
+7 bits number range
+
+Bit 0, 1 base 2
+
+- 2 ^ 7 to 2 ^ 7 - 1
+-128 to 127
