@@ -1,0 +1,25 @@
+1. Sparse Matrix
+2. print principle diagonal of a given matrix
+
+Factorial
+
+5! = 5 * 4 * 3 * 2 * 1 = 120
+
+Fibonacci Series
+
+n1 = 0, n2 = 1
+
+0 1 1 2 3 = 5
+
+Palindrome 
+
+123 = 321 = NP
+121 = 121 = P
+
+Reverse Number
+
+123 = 321
+
+Sum of Digits
+
+123 = 1 + 2 + 3 = 6
