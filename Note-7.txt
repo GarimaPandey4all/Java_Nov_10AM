@@ -1,24 +1,25 @@
-OOPS:
+1. Sparse Matrix
+2. print principle diagonal of a given matrix
 
-- Provide a feature of data binding using classes.
-- So your class have your variable and your methods that never conflict with other developers.
-- So we can use for large and complex system and it fit for real world scenerios.
+Factorial
 
-Now in OOPS we can use same variable names, same method name in different classes.
+5! = 5 * 4 * 3 * 2 * 1 = 120
 
-What is OOPS?
+Fibonacci Series
 
-- Divide a big problem into classes.
+n1 = 0, n2 = 1
 
-OOPS features:
+0 1 1 2 3 = 5
 
-1. Class , Object
+Palindrome 
 
-Object: real world entity
+123 = 321 = NP
+121 = 121 = P
 
-Class: Collection of similar objects
-blueprint, category
+Reverse Number
 
-Class- Collection of Features/Characterics
-e.g: Human (Features Brain, Height etc)
-object- ram state brain sharp, 5 feet height
+123 = 321
+
+Sum of Digits
+
+123 = 1 + 2 + 3 = 6

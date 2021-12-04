@@ -1,66 +1,33 @@
-2 major types of programming:
+Wrapper Classes
 
-- Procedural Programming - Functions - Divide a problem into functions.
-- OOPS: (Object Oriented Programming Langauage) - Wrap all the variables and functions/methods into a single unit.
+- Wrapper class is a class whose object wraps or contains primitive/value data types.
 
-Why OOPS?
+Primitive Data Types
 
-In C Programming:
+int
+long
+short
+char
+double
+float
+boolean
+byte
 
-int x, y;
+Wrapper Class
 
-add()
-{
-}
+Integer
+Long
+Short
+Character
+Double
+Float
+Boolean
+Byte
 
-sub()
-{
-}
+Autoboxing: Automatic conversion of primitive data types to the object of their corresponding wrapper
+classses is known as autoboxing
 
-div()
-{
-}
+Unboxing: Reverse of Autoboxing.
 
-mul()
-{
-}
-
-sin()
-{
-double x;
-}
-
-class A{
-
-int x, y;
-
-add()
-{
-}
-
-sub()
-{
-}
-
-div()
-{
-}
-
-mul()
-{
-}
-
-}
-
-class B
-{
-sin()
-{
-double x;
-}
-}
-
-is Java has global variable?
-- No, because in java every program start with class, and class doesn't have global variable.
-
-
+Second way of initialization
+Scanner: use of scanner is to take user input at runtime.
