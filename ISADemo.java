@@ -14,6 +14,11 @@ class Person {
 	{
 		System.out.println("Name of the Person is: "+name);
 	}
+	
+	public void contNumber()
+	{
+		System.out.println("Contact Number of Person");
+	}
 }
 
 //Child Class
@@ -32,6 +37,15 @@ class Student extends Person // Inheritance
 	{
 		System.out.println("Student Id is: "+id);
 	}	
+	
+	//polymorphism: many forms; person - student, employee, son, father, uncle etc
+	
+	//override: hide the parent method
+	@Override
+	public void contNumber()
+	{
+		System.out.println("Contact Number of Student");
+	}
 }
 
 public class ISADemo {
@@ -43,6 +57,10 @@ public class ISADemo {
 
 		student.printId();
 		student.printName();
+		student.contNumber();
+		
+		Person person = new Person(null);
+		person.contNumber();
 	}
 
 }
