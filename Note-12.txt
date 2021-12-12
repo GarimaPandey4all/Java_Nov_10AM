@@ -1,21 +1,51 @@
-Final Keyword:
+String Handling:
 
-- If a variable is declared with the final keyword, its value can't be changed once initialized.
+- String internally is a char[]
+e.g: String name = "Ram";
+char name[] = {'R', 'a', 'm'};
 
-pi = 22/7 = 3.14 = constant = fixed value
+- String is a Predefine class in java
+- It is also treat like a data type
+- String is a final class, so you can't inherit
+- String objects are created in 2 ways:
 
-- A method, declared with the final keyword, can't be overridden or hidden by subclasses.
+a) String Literal Style
+String name = "Ram";
+b) String Object Style
+String name = new String("Ram");
 
-- A class declared as a final class, can't be subclassed.
+- String use string pool
+- String objects are immutable
+
+Immutable: String doesn't change existing or original objects, it can create
+		new memory or object all the time.
 
 
-finalize() method
+StringBuffer: It is mutuable that means it doesn't create new objects or memory.
 
-- Finalize is used to perform clean up processing just before object is garbage collected.
+Capacity cross:
+Default Cap: 16
+Old Cap * 2 + 2
+16 * 2 + 2 = 34
+ 
 
-Casting:
-object typecasting
-1. Upcasting
-- child object typecasted to a parent class object
-2. Downcasting
-- parent class object typecasting into a child class object (Explicitly)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
