@@ -21,7 +21,7 @@ public interface DB {
 		pd.setPanCard("87324687");
 		pd.setVoterId("8732468");
 		pd.setEmail("tim@gmail.com");
-		
+		customer.setPersonal(pd);
 		negativeCustomers.add(customer);
 		
 		customer = new Customer();
@@ -34,7 +34,7 @@ public interface DB {
 		pd.setPanCard("BW3u5484");
 		pd.setVoterId("hl32468");
 		pd.setEmail("tom@gmail.com");
-		
+		customer.setPersonal(pd);
 		negativeCustomers.add(customer);
 		
 		return negativeCustomers;

@@ -4,6 +4,7 @@ import com.brainmentors.los.customer.Customer;
 import com.brainmentors.los.customer.LoanDetails;
 import com.brainmentors.los.customer.PersonalInformation;
 import com.brainmentors.los.utils.CommonConstants;
+import com.brainmentors.los.utils.LoanConstants;
 import com.brainmentors.los.utils.StageConstants;
 import com.brainmentors.los.utils.Utility;
 
@@ -147,6 +148,80 @@ public class LOSProcess implements StageConstants, CommonConstants{
 		
 	}
 	
+	public void scoring(Customer customer)
+	{
+		customer.setStage(SCORING);
+		
+		int score = 0;
+		
+		double totalIncome = customer.getIncome() - customer.getLiability();
+		
+		if(customer.getPersonal().getAge() >= 21 && customer.getPersonal().getAge() <= 35)
+		{
+			score += 50;
+		}
+		
+		if(totalIncome >= 20000)
+		{
+			score += 50;
+		}
+		
+		customer.getLoanDetails().setScore(score);
+	}
+	
+	public void approval(Customer customer)
+	{
+		customer.setStage(APPROVAL);
+		
+		int score = customer.getLoanDetails().getScore();
+		System.out.println("Id "+customer.getId());
+		System.out.println("Name is: "+customer.getPersonal().getFirstName()+" "
+		+customer.getPersonal().getLastName());
+		System.out.println("Loan "+customer.getLoanDetails().getType()
+				+" Amount "+customer.getLoanDetails().getAmount()
+				+" Duration "+customer.getLoanDetails().getDuration());
+		
+		System.out.println("Loan Approaved Amount is: "+customer.getLoanDetails().getAmount());
+		System.out.println("Do you want to bring this loan or not:");
+		char choice = scanner.next().toUpperCase().charAt(0);
+		
+		if(choice == NO)
+		{
+			customer.setStage(REJECT);
+			customer.setRemarks("Customer Deny the Approved Amount "+customer.getLoanDetails().getAmount());
+			return;
+		}
+		else {
+			showEMI(customer);
+		}
+	}
+	
+	private void showEMI(Customer customer)
+	{
+		if(customer.getLoanDetails().getType() == LoanConstants.HOME_LOAN)
+		{
+			customer.getLoanDetails().setRoi(LoanConstants.HOME_LOAN_ROI);
+		}
+		if(customer.getLoanDetails().getType() == LoanConstants.AUTO_LOAN)
+		{
+			customer.getLoanDetails().setRoi(LoanConstants.AUTO_LOAN_ROI);
+		}
+		if(customer.getLoanDetails().getType() == LoanConstants.PERSONAL_LOAN)
+		{
+			customer.getLoanDetails().setRoi(LoanConstants.PERSONAL_LOAN_ROI);
+		}
+		
+		double perMonthPrinciple = customer.getLoanDetails().getAmount() 
+				/ customer.getLoanDetails().getDuration();
+		double interest = perMonthPrinciple * customer.getLoanDetails().getRoi();
+		
+		double totalEMI = perMonthPrinciple + interest;
+		
+		System.out.println("Your EMI is: "+totalEMI);
+		
+		System.exit(0);
+	}
+	
 	public void moveToNextStage(Customer customer)
 	{
 		while(true)
@@ -186,7 +261,7 @@ public class LOSProcess implements StageConstants, CommonConstants{
 				
 				if(choice == YES)
 				{
-					//scoring(customer);
+					scoring(customer);
 				}
 				else {
 					return;
@@ -200,7 +275,7 @@ public class LOSProcess implements StageConstants, CommonConstants{
 				
 				if(choice == YES)
 				{
-					//approval(customer);
+					approval(customer);
 				}
 				else {
 					return;
